@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="Warning Preferences"
+        android:key="warning_preferences">
+ 
+        <RingtonePreference 
+		    android:key="notifycamera"
+		    android:title="Intersection Camera"
+		    android:showSilent="true"
+		    android:ringtoneType="notification|alarm"
+		    android:summary="Sound played when intersection camera detected." android:persistent="true" android:showDefault="true"/>
+            
+         <RingtonePreference 
+		    android:key="notifytraffic"
+		    android:title="Traffic Accident"
+		    android:showSilent="true"
+		    android:ringtoneType="notification|alarm"
+		    android:summary="Sound played when traffic accident site detected." android:showDefault="true" android:persistent="true"/>
+            
+        <RingtonePreference 
+		    android:key="notifyphoto"
+		    android:title="Photo Radar"
+		    android:showSilent="true"
+		    android:ringtoneType="notification|alarm"
+		    android:summary="Sound played when photo radar site detected." android:persistent="true" android:showDefault="true"/>
+                     
+            
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:title="Scanning Preferences"
+        android:key="scanning_preferences">
+        
+       <ListPreference 
+            android:key="scan_start_speed"
+            android:title="Begin scanning @ (KPH)"
+            android:summary="The speed at which to begin scanning"
+            android:defaultValue="40" 
+            android:entries="@array/scanStartSpeed"
+            android:entryValues="@array/scanstartspeedValues"
+            android:persistent="true"/>
+         
+        <CheckBoxPreference 
+            android:key="perform_updates"
+            android:summary="Automatic data updates"
+            android:title="Enable updates" 
+            android:defaultValue="true" android:persistent="true"/>
+        
+        <ListPreference 
+            android:key="data_update_interval"
+            android:title="Update interval"
+            android:summary="Define how often updates will be performed"
+            android:defaultValue="1000" 
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:dependency="perform_updates"
+            android:persistent="true"/>
+
+    </PreferenceCategory>    
+
+    <PreferenceCategory
+            android:title="Map Preferences"
+        	android:key="map_preferences">  
+        	
+	   	<CheckBoxPreference 
+            android:key="satellite_view"
+            android:title="Enable satellite view" 
+            android:summary="Enable satellite view on map"
+            android:defaultValue="false" android:persistent="true"/>
+        
+	   	<CheckBoxPreference 
+            android:key="traffic_view"
+            android:title="Enable traffic view" 
+            android:summary="Enable traffic view on map"
+            android:defaultValue="false" android:persistent="true"/>
+	   		   	
+	   		   	
+    </PreferenceCategory>
+        
+</PreferenceScreen>

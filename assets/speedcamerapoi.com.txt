@@ -1,0 +1,19 @@
+from : speedcamerapoi.com
+
+Key
+X – longitude coordinate
+Y – latitude coordinate
+
+TYPE – Camera type: 
+1 – Speed camera, 
+3 – Red Light camera, 
+5 – Mobile police camera/radar
+
+SPEED – Speed limit: 0,20,30,40,50,60,70,80,90,100,110,120
+
+DIRTYPE – indicates which direction the camera works in:
+0 – any direction, 
+1 – only direction of travel, 
+2 – both directions
+
+DIRECTION – Camera direction in degrees, stored to the nearest 45º
